@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProfileAppAssignment.Pages.ProfilePage"
+             Shell.BackgroundColor="LightPink"
+             BackgroundColor="LightPink">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+             
+            <Label 
+                Text="Your Profile"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Margin="0,0,0,20"/>
+                
+            <!-- Name Entry -->
+            <Frame CornerRadius="10" Padding="15" HasShadow="True" >
+                <VerticalStackLayout>
+                    <Entry 
+                x:Name="nameEntry"
+                Placeholder="Enter your name"  
+                Margin="0,0,0,10"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Surname Entry -->
+            <Frame CornerRadius="10" Padding="15" HasShadow="True" >
+                <VerticalStackLayout>
+                    <Entry 
+                x:Name="surnameEntry"
+                Placeholder="Enter your surname"
+                Margin="0,0,0,10"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- email Entry -->
+            <Frame CornerRadius="10" Padding="15" HasShadow="True" >
+                <VerticalStackLayout>
+                    <Entry 
+                x:Name="emailEntry"
+                Placeholder="Enter your email"
+                Keyboard="Email"
+                Margin="0,0,0,10"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Bio Entry -->
+            <Frame CornerRadius="10" Padding="15" HasShadow="True"  >
+                <VerticalStackLayout>
+                    <Editor 
+                x:Name="bioEditor"
+                Placeholder="Write something about yourself"
+                HeightRequest="100"
+                Margin="0,0,0,20"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Save Button -->
+            <Button 
+                x:Name="saveButton"
+                Text="Save"
+                Clicked="SaveProfile"
+                BackgroundColor="DeepPink"
+                TextColor="White"
+                CornerRadius="25"
+                HeightRequest="50"
+                Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
